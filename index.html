@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d0b">
+<title>bipin.opt — Creative Studio</title>
+<style>
+:root{--bg:#080d0b;--panel:#101815;--panel2:#151f1a;--line:#26352d;--text:#eef7f0;--muted:#91a49a;--green:#9df06b;--green2:#c3ff9b;--danger:#ff7777;--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#1d3826 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+button,input,select{font:inherit}button{cursor:pointer;border:0} .app{max-width:1180px;margin:auto;padding:16px 16px 90px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 18px}
+.brand{font-weight:900;font-size:23px;letter-spacing:-1px}.brand span{color:var(--green)}.tag{color:var(--muted);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted);font-size:12px}
+h1{font-size:clamp(27px,6vw,42px);line-height:1.05;letter-spacing:-1.5px;margin:8px 0 10px}h1 em{font-style:normal;color:var(--green)}
+.sub{color:var(--muted);max-width:650px;margin:0 0 20px}
+.tabs{display:flex;gap:8px;overflow:auto;padding:4px 0 14px;scrollbar-width:none}.tab{white-space:nowrap;background:var(--panel);border:1px solid var(--line);border-radius:999px;color:var(--muted);padding:10px 15px}.tab.active{background:var(--green);color:#10200e;border-color:var(--green);font-weight:800}
+.layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.8fr);gap:14px}
+.panel{background:linear-gradient(145deg,#131d17,#0e1511);border:1px solid var(--line);border-radius:var(--radius);padding:15px;min-width:0}
+.panel h2{font-size:16px;margin:0 0 12px}.muted{color:var(--muted)}.small{font-size:12px;color:var(--muted)}
+.preview{background:#050806;border:1px solid #27352c;border-radius:15px;min-height:280px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+#previewImg,#previewVideo{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;display:none}
+#previewText{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:clamp(18px,4vw,34px);font-weight:900;text-align:center;text-shadow:0 2px 10px #000;max-width:90%;pointer-events:none}
+.empty{text-align:center;padding:25px}.empty .symbol{font-size:38px;color:var(--green)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{background:var(--green);color:#11200d;font-weight:800;border-radius:12px;padding:11px 14px}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.control{margin:13px 0}.control label{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:7px}.control input[type=range]{width:100%;accent-color:var(--green)}
+input[type=text],input[type=number],select{width:100%;background:#09100c;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.section{margin-top:14px}.track{display:flex;gap:9px;align-items:center;background:#0b120e;border:1px solid var(--line);padding:10px;border-radius:11px;margin-top:8px}.track strong{font-size:12px}.track .bar{height:9px;background:linear-gradient(90deg,#69b94e,#b6ef80);border-radius:99px;flex:1}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.feature{background:#0b120e;border:1px solid var(--line);border-radius:13px;padding:12px}.feature b{display:block;font-size:13px}.feature span{font-size:11px;color:var(--muted)}
+.notice{border:1px solid #465c3d;background:#172417;border-radius:12px;padding:11px;color:#c9e8bb;font-size:12px;margin-top:12px}
+.hidden{display:none!important}.file{display:none}.range-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+footer{padding:25px 0;text-align:center;color:#6f8176;font-size:11px;letter-spacing:.5px}
+.bottom{display:none}
+@media(max-width:760px){.app{padding:12px 12px 95px}.layout{grid-template-columns:1fr}.preview{min-height:230px;aspect-ratio:9/12;max-height:52vh}.feature-grid{grid-template-columns:repeat(2,1fr)}header{padding-bottom:12px}.bottom{display:flex;position:fixed;bottom:0;left:0;right:0;background:#0a110dF2;backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:9px max(10px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom));justify-content:space-around;z-index:5}.bottom button{background:none;color:var(--muted);font-size:11px}.bottom button span{display:block;font-size:18px}.bottom button.active{color:var(--green)}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div><div class="brand">bipin<span>.</span>opt</div><div class="tag">Creative studio · mobile first</div></div><div class="pill">STUDIO BETA</div></header>
+<h1>Create beyond <em>limits.</em></h1>
+<p class="sub">A mobile-first photo and video workspace. Import your media, build a look, add titles and export your edit.</p>
+<nav class="tabs" aria-label="Studio sections">
+<button class="tab active" data-tab="editor">Video editor</button><button class="tab" data-tab="photo">Photo enhancer</button><button class="tab" data-tab="effects">Effects lab</button><button class="tab" data-tab="about">AI tools</button>
+</nav>
+<section id="editor" class="tabpage">
+<div class="layout">
+<div class="panel">
+<h2>Preview canvas</h2>
+<div class="preview" id="preview">
+<div class="empty" id="empty"><div class="symbol">＋</div><b>Start a new project</b><p class="small">Import a photo or video from your device</p><button class="btn" id="importBtn">Import media</button></div>
+<img id="previewImg" alt="Your imported photo"><video id="previewVideo" playsinline></video><div id="previewText"></div>
+</div>
+<input class="file" id="mediaInput" type="file" accept="image/*,video/*">
+<div class="actions"><button class="btn" id="playBtn" disabled>▶ Play</button><button class="btn secondary" id="addTextBtn" disabled>Add text</button><button class="btn secondary" id="exportBtn" disabled>Export</button><button class="btn ghost" id="resetBtn">Reset</button></div>
+<div class="section"><h2>Timeline</h2><div class="track"><strong>MEDIA</strong><div class="bar"></div><span class="small" id="mediaLabel">Empty</span></div><div class="track"><strong>TEXT</strong><div class="bar" style="background:linear-gradient(90deg,#8d78dc,#c6a9ff)"></div><span class="small">Overlay</span></div></div>
+<div class="notice">This first build edits media locally in your browser. Video export uses browser recording support; availability and performance vary by device.</div>
+</div>
+<div class="panel">
+<h2>Adjustments</h2>
+<div class="control"><label>Brightness <span id="brightVal">100%</span></label><input id="brightness" type="range" min="0" max="200" value="100"></div>
+<div class="control"><label>Contrast <span id="contrastVal">100%</span></label><input id="contrast" type="range" min="0" max="200" value="100"></div>
+<div class="control"><label>Saturation <span id="satVal">100%</span></label><input id="saturation" type="range" min="0" max="200" value="100"></div>
+<div class="control"><label>Blur <span id="blurVal">0px</span></label><input id="blur" type="range" min="0" max="12" value="0"></div>
+<div class="control"><label>Playback speed <span id="speedVal">1×</span></label><input id="speed" type="range" min=".25" max="2" step=".25" value="1"></div>
+<div class="control"><label>Overlay text</label><input id="titleInput" type="text" placeholder="Type a title..." maxlength="80"></div>
+<div class="grid2"><div><label class="small">Text size</label><input id="textSize" type="number" min="12" max="80" value="34"></div><div><label class="small">Text color</label><input id="textColor" type="color" value="#ffffff" style="height:42px;padding:4px"></div></div>
+<div class="actions"><button class="btn secondary" id="resetAdjust">Reset adjustments</button></div>
+</div>
+</div>
+</section>
+<section id="photo" class="tabpage hidden">
+<div class="panel"><h2>Photo enhancer</h2><p class="small">Improve an image with local browser adjustments. True AI upscaling and face restoration require an AI service connection.</p>
+<div class="actions"><button class="btn" id="photoImport">Choose photo</button><button class="btn secondary" id="photoDownload" disabled>Download enhanced photo</button></div>
+<div class="preview" style="margin-top:12px"><img id="photoPreview" alt="Photo enhancement preview" style="display:none;max-width:100%;max-height:100%;object-fit:contain"><div class="empty" id="photoEmpty">Your photo preview will appear here</div></div>
+<div class="grid2 section"><div class="control"><label>Clarity <span id="pSharpVal">100%</span></label><input id="pSharp" type="range" min="50" max="180" value="100"></div><div class="control"><label>Color <span id="pSatVal">110%</span></label><input id="pSat" type="range" min="0" max="200" value="110"></div><div class="control"><label>Brightness <span id="pBrightVal">100%</span></label><input id="pBright" type="range" min="50" max="160" value="100"></div><div class="control"><label>Contrast <span id="pContrastVal">110%</span></label><input id="pContrast" type="range" min="50" max="180" value="110"></div></div>
+</div>
+</section>
+<section id="effects" class="tabpage hidden">
+<div class="panel"><h2>Effects lab</h2><p class="small">Quick looks for your imported media. Select a preset, then fine-tune it in Adjustments.</p><div class="feature-grid">
+<button class="feature preset" data-v="cinema"><b>🎬 Cinema</b><span>Moody contrast</span></button><button class="feature preset" data-v="vivid"><b>🌈 Vivid</b><span>Bright color</span></button><button class="feature preset" data-v="mono"><b>◐ Mono</b><span>Black & white</span></button><button class="feature preset" data-v="soft"><b>☁ Soft glow</b><span>Gentle softness</span></button><button class="feature preset" data-v="warm"><b>🌅 Warm</b><span>Golden tone</span></button><button class="feature preset" data-v="cool"><b>❄ Cool</b><span>Cool cinematic</span></button></div></div>
+</section>
+<section id="about" class="tabpage hidden">
+<div class="panel"><h2>AI tools — connection ready</h2><p class="small">These are planned integrations, not active AI features in this offline prototype.</p><div class="feature-grid"><div class="feature"><b>✨ AI Upscaler</b><span>Needs AI image API</span></div><div class="feature"><b>🙂 Face Restore</b><span>Needs AI model</span></div><div class="feature"><b>🧠 AI Chat</b><span>Needs secure backend</span></div><div class="feature"><b>🎨 AI Image Studio</b><span>Needs image generation API</span></div><div class="feature"><b>🎙 Voice Tools</b><span>Needs speech service</span></div><div class="feature"><b>📄 Document AI</b><span>Needs document model</span></div></div><div class="notice">Never put private API keys in this HTML file. Connect AI services through a secure server.</div></div>
+</section>
+<footer>built with ❤️ by 21.coders</footer>
+</div>
+<div class="bottom"><button class="active" data-tab="editor"><span>✂</span>Edit</button><button data-tab="photo"><span>✦</span>Photo</button><button data-tab="effects"><span>◈</span>Effects</button><button data-tab="about"><span>✧</span>AI tools</button></div>
+<script>
+const $=id=>document.getElementById(id);
+let mediaURL=null, mediaType=null, photoURL=null;
+const img=$('previewImg'), vid=$('previewVideo'), preview=$('preview'), overlay=$('previewText');
+const filters={brightness:100,contrast:100,saturation:100,blur:0};
+function filterString(){return `brightness(${filters.brightness}%) contrast(${filters.contrast}%) saturate(${filters.saturation}%) blur(${filters.blur}px)`;}
+function apply(){const f=filterString();img.style.filter=f;vid.style.filter=f;}
+function loadFile(file){
+ if(!file)return;
+ if(mediaURL)URL.revokeObjectURL(mediaURL);
+ mediaURL=URL.createObjectURL(file);mediaType=file.type.startsWith('video')?'video':'image';
+ $('empty').classList.add('hidden');img.style.display='none';vid.style.display='none';
+ if(mediaType==='image'){img.src=mediaURL;img.style.display='block';$('playBtn').disabled=true;}
+ else{vid.src=mediaURL;vid.style.display='block';$('playBtn').disabled=false;}
+ $('mediaLabel').textContent=file.name.length>18?file.name.slice(0,15)+'…':file.name;
+ ['addTextBtn','exportBtn'].forEach(id=>$(id).disabled=false);apply();
+}
+$('importBtn').onclick=()=>$('mediaInput').click();
+$('mediaInput').onchange=e=>loadFile(e.target.files[0]);
+$('playBtn').onclick=()=>{if(vid.paused){vid.play();$('playBtn').textContent='Ⅱ Pause'}else{vid.pause();$('playBtn').textContent='▶ Play'}};
+$('addTextBtn').onclick=()=>{$('titleInput').focus();overlay.textContent=$('titleInput').value||'Your title';};
+$('titleInput').oninput=e=>overlay.textContent=e.target.value;
+$('textSize').oninput=e=>overlay.style.fontSize=e.target.value+'px';
+$('textColor').oninput=e=>overlay.style.color=e.target.value;
+['brightness','contrast','saturation','blur'].forEach(k=>$(k).oninput=e=>{filters[k]=+e.target.value;$(k+'Val').textContent=e.target.value+(k==='blur'?'px':'%');apply();});
+$('speed').oninput=e=>{vid.playbackRate=+e.target.value;$('speedVal').textContent=e.target.value+'×';};
+$('resetAdjust').onclick=()=>{Object.assign(filters,{brightness:100,contrast:100,saturation:100,blur:0});for(const k in filters){$(k).value=filters[k];$(k+'Val').textContent=filters[k]+(k==='blur'?'px':'%');}apply();};
+$('resetBtn').onclick=()=>{vid.pause();vid.removeAttribute('src');img.removeAttribute('src');img.style.display='none';vid.style.display='none';$('empty').classList.remove('hidden');overlay.textContent='';$('mediaLabel').textContent='Empty';['playBtn','addTextBtn','exportBtn'].forEach(id=>$(id).disabled=true);};
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab,.bottom button').forEach(x=>x.classList.toggle('active',x.dataset.tab===b.dataset.tab));document.querySelectorAll('.tabpage').forEach(x=>x.classList.toggle('hidden',x.id!==b.dataset.tab));});
+document.querySelectorAll('.preset').forEach(b=>b.onclick=()=>{const p={cinema:[92,125,90,0],vivid:[108,110,145,0],mono:[100,115,0,0],soft:[108,95,110,1.5],warm:[108,105,125,0],cool:[98,112,112,0]}[b.dataset.v];['brightness','contrast','saturation','blur'].forEach((k,i)=>{filters[k]=p[i];$(k).value=p[i];$(k+'Val').textContent=p[i]+(k==='blur'?'px':'%')});apply();});
+$('exportBtn').onclick=async()=>{
+ if(mediaType==='image'){const c=document.createElement('canvas'),im=new Image();im.src=mediaURL;await im.decode();c.width=im.naturalWidth;c.height=im.naturalHeight;const x=c.getContext('2d');x.filter=filterString();x.drawImage(im,0,0);drawText(x,c.width,c.height);downloadCanvas(c,'bipin-opt-photo.png');return;}
+ if(mediaType==='video')recordVideo();
+};
+function drawText(ctx,w,h){const t=overlay.textContent;if(!t)return;const size=Number($('textSize').value)||34;ctx.font=`900 ${size}px system-ui`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle=$('textColor').value;ctx.shadowColor='#000';ctx.shadowBlur=8;ctx.fillText(t,w/2,h/2,w*.9);}
+function downloadCanvas(c,name){c.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);},'image/png');}
+function recordVideo(){
+ const c=document.createElement('canvas'),w=vid.videoWidth||720,h=vid.videoHeight||1280;c.width=w;c.height=h;const ctx=c.getContext('2d');
+ const stream=c.captureStream(30);try{if(vid.captureStream){vid.captureStream().getAudioTracks().forEach(t=>stream.addTrack(t));}}catch(e){}
+ const mime=['video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm'].find(m=>MediaRecorder.isTypeSupported(m));if(!mime){alert('Video export is not supported in this browser. Try a recent desktop Chrome browser.');return;}
+ const chunks=[],rec=new MediaRecorder(stream,{mimeType:mime});rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};rec.onstop=()=>{const blob=new Blob(chunks,{type:mime}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='bipin-opt-edit.webm';a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);$('exportBtn').textContent='Export';};
+ rec.start();vid.currentTime=0;vid.play();$('exportBtn').textContent='Rendering…';
+ let raf;const draw=()=>{ctx.filter=filterString();ctx.drawImage(vid,0,0,w,h);ctx.filter='none';drawText(ctx,w,h);if(!vid.ended&&rec.state==='recording')raf=requestAnimationFrame(draw);else if(rec.state==='recording')rec.stop();};draw();vid.onended=()=>{cancelAnimationFrame(raf);if(rec.state==='recording')rec.stop();};
+}
+$('photoImport').onclick=()=>{const i=document.createElement('input');i.type='file';i.accept='image/*';i.onchange=()=>{if(!i.files[0])return;photoURL=URL.createObjectURL(i.files[0]);$('photoPreview').src=photoURL;$('photoPreview').style.display='block';$('photoEmpty').classList.add('hidden');$('photoDownload').disabled=false;};i.click();};
+
+// Set photo filter and labels.
+function updatePhoto(){const b=$('pBright').value,c=$('pContrast').value,s=$('pSat').value,sh=$('pSharp').value;$('photoPreview').style.filter=`brightness(${b}%) contrast(${c}%) saturate(${s}%)`;[['pBrightVal',b],['pContrastVal',c],['pSatVal',s],['pSharpVal',sh]].forEach(([id,v])=>$(id).textContent=v+'%');}
+['pBright','pContrast','pSat','pSharp'].forEach(id=>$(id).oninput=updatePhoto);
+$('photoDownload').onclick=async()=>{if(!photoURL)return;const im=new Image();im.src=photoURL;await im.decode();const c=document.createElement('canvas');c.width=im.naturalWidth;c.height=im.naturalHeight;const x=c.getContext('2d');x.filter=$('photoPreview').style.filter;x.drawImage(im,0,0);downloadCanvas(c,'bipin-opt-enhanced.png');};
+</script>
+</body>
+</html>
